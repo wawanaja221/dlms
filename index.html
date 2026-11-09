@@ -2,20 +2,20 @@
 <html lang="id">
 <head>
 <meta charset="utf-8">
-<title>DLMS Compact</title>
+<title>dlms wansPRo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <style>
 :root{
-  --bg:#0b0d10; --pn:#14181e; --p2:#1a2028; --bd:#2a3340;
-  --tx:#e8edf4; --mu:#8b95a5; --ac:#3b82f6; --acb:#1e3a5f;
-  --on:#ef4444; --gn:#22c55e; --yl:#eab308;
+  --bg:#0e1218; --pn:#161c24; --p2:#1c2430; --bd:#2c3645;
+  --tx:#e6ebf2; --mu:#9aa6b5; --ac:#5b9fd4; --acb:#1a3348;
+  --on:#e87979; --gn:#4ade80; --yl:#f0c14a;
   color-scheme:dark;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0}
 body{
   font:12.5px/1.35 system-ui,-apple-system,sans-serif;
-  background:radial-gradient(1200px 600px at 50% -10%,#152033 0%,var(--bg) 55%);
+  background:radial-gradient(1000px 520px at 50% -8%,#1a2535 0%,var(--bg) 50%);
   color:var(--tx); min-height:100vh;
   padding-bottom:max(12px, env(safe-area-inset-bottom));
 }
@@ -45,7 +45,7 @@ select{min-height:36px;padding:6px 8px;background:#0f1318}
 .brand{display:flex;align-items:center;gap:8px;font-weight:800;letter-spacing:.04em}
 .brand i{
   width:28px;height:28px;border-radius:8px;display:grid;place-items:center;
-  background:linear-gradient(135deg,#3b82f6,#06b6d4);font-style:normal;font-size:12px;
+  background:linear-gradient(135deg,#5b9fd4,#3d8f9e);font-style:normal;font-size:12px;
 }
 .brand small{display:block;font-weight:500;color:var(--mu);font-size:10px;letter-spacing:0}
 .top .r{margin-left:auto;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
@@ -72,13 +72,13 @@ select{min-height:36px;padding:6px 8px;background:#0f1318}
   flex:1 1 0;min-width:64px;padding:9px 6px;font-size:11px;font-weight:700;
   border-radius:10px;background:#12161c;
 }
-.nav button.a{background:linear-gradient(180deg,#1d4ed8,#1e40af);border-color:#3b82f6;color:#fff}
+.nav button.a{background:linear-gradient(180deg,#2d6a9f,#1e4f78);border-color:#5b9fd4;color:#fff}
 
 .pad{padding:10px 10px 0}
 .card{
-  background:var(--pn);border:1px solid var(--bd);border-radius:14px;
+  background:var(--pn);border:1px solid var(--bd);border-radius:12px;
   padding:12px;margin-bottom:10px;
-  box-shadow:0 8px 24px rgba(0,0,0,.25);
+  box-shadow:0 4px 16px rgba(0,0,0,.18);
 }
 .card h2{
   margin:0 0 10px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);
@@ -90,7 +90,8 @@ select{min-height:36px;padding:6px 8px;background:#0f1318}
 .strips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scroll-snap-type:x mandatory}
 .ch{
   flex:0 0 108px;scroll-snap-align:start;
-  background:var(--p2);border:1px solid var(--bd);border-radius:12px;
+  background:linear-gradient(180deg,#1e2630 0%,#1a212c 100%);
+  border:1px solid var(--bd);border-radius:12px;
   padding:8px 6px 6px;display:flex;flex-direction:column;gap:5px;
 }
 .ch .nm{text-align:center;font-weight:800;font-size:12px;letter-spacing:.06em}
@@ -98,8 +99,8 @@ select{min-height:36px;padding:6px 8px;background:#0f1318}
 .ch .btns{display:grid;grid-template-columns:1fr 1fr;gap:4px}
 .ch .btns button{padding:6px 2px;font-size:10px;font-weight:700;min-height:32px;border-radius:7px}
 .ch .btns button.wide{grid-column:1/-1}
-.ch .onbtn{width:100%;font-weight:800;letter-spacing:.08em}
-.ch .onbtn.on{background:#14532d;border-color:#22c55e;color:#bbf7d0}
+.ch .mutebtn{width:100%;font-weight:800;letter-spacing:.08em;background:#1c2430}
+.ch .mutebtn.on{background:#3f1a1a;border-color:#e87979;color:#fecaca}
 
 /* matrix */
 .mx-wrap{overflow-x:auto}
@@ -162,7 +163,7 @@ select{min-height:36px;padding:6px 8px;background:#0f1318}
 <body>
 <div class="app">
   <div class="top">
-    <div class="brand"><i>DS</i><div>DLMS Compact<small>4 IN · 8 OUT · DSP</small></div></div>
+    <div class="brand"><i>DLMS</i><div>dlms wansPRo<small>4 IN · 8 OUT · DSP</small></div></div>
     <div class="r">
       <span class="chip" id="st">SIAP</span>
       <button class="a" id="bs">Save</button>
@@ -190,7 +191,7 @@ select{min-height:36px;padding:6px 8px;background:#0f1318}
   <div class="pad">
     <div class="card tab-pane on" data-pane="in">
       <h2><b>Input</b> IN 1–4</h2>
-      <div class="strips" id="I"></div>
+      <div class="strips" id="In"></div>
     </div>
     <div class="card tab-pane" data-pane="route">
       <h2><b>Routing</b> 4×8 matrix</h2>
@@ -198,14 +199,14 @@ select{min-height:36px;padding:6px 8px;background:#0f1318}
     </div>
     <div class="card tab-pane" data-pane="out">
       <h2><b>Output</b> OUT 1–8</h2>
-      <div class="strips" id="O"></div>
+      <div class="strips" id="Out"></div>
     </div>
     <div class="card tab-pane" data-pane="param" id="P">
       <h2><b>Parameter</b></h2>
       <div style="color:var(--mu)">Pilih GAIN / EQ / COMP / XOVER / LIM / DLY pada channel</div>
     </div>
     <div class="card tab-pane" data-pane="vu">
-      <h2><b>VU Meters</b> LED</h2>
+      <h2><b>VU Meters</b></h2>
       <div id="MI"></div>
       <div id="MO"></div>
     </div>
@@ -377,7 +378,7 @@ function draw(){
   $('#I').innerHTML=S.inputs.map((c,i)=>`<div class="ch">
     <div class="nm">IN ${i+1}</div>
     <div class="gval">${(+c.gain||0).toFixed(1)} dB</div>
-    <button class="onbtn ${c.mute?'':'on'}" data-k="i" data-i="${i}" data-p="mute">${c.mute?'OFF':'ON'}</button>
+    <button class="mutebtn ${c.mute?'on':''}" data-k="i" data-i="${i}" data-p="mute">MUTE</button>
     <div class="btns">
       <button class="${sel&&sel.k==='i'&&sel.i===i&&sel.p==='gain'?'sel':''}" data-k="i" data-i="${i}" data-p="gain">GAIN</button>
       <button class="${sel&&sel.k==='i'&&sel.i===i&&sel.p==='eq'?'sel':''}" data-k="i" data-i="${i}" data-p="eq">EQ</button>
@@ -389,7 +390,7 @@ function draw(){
   $('#O').innerHTML=S.outputs.map((c,o)=>`<div class="ch">
     <div class="nm">OUT ${o+1}</div>
     <div class="gval">${(+c.gain||0).toFixed(1)} dB</div>
-    <button class="onbtn ${c.mute?'':'on'}" data-k="o" data-i="${o}" data-p="mute">${c.mute?'OFF':'ON'}</button>
+    <button class="mutebtn ${c.mute?'on':''}" data-k="o" data-i="${o}" data-p="mute">MUTE</button>
     <div class="btns">
       <button class="${sel&&sel.k==='o'&&sel.i===o&&sel.p==='xo'?'sel':''}" data-k="o" data-i="${o}" data-p="xo">XOVER</button>
       <button class="${sel&&sel.k==='o'&&sel.i===o&&sel.p==='eq'?'sel':''}" data-k="o" data-i="${o}" data-p="eq">EQ</button>
@@ -457,9 +458,8 @@ function panel(){
     let rtaBtns='';
     for(let n=0;n<4;n++) rtaBtns+=`<button type="button" data-rta="i" data-ch="${n}" class="${rtaView.k==='i'&&rtaView.i===n?'a':''}">IN${n+1}</button>`;
     for(let n=0;n<8;n++) rtaBtns+=`<button type="button" data-rta="o" data-ch="${n}" class="${rtaView.k==='o'&&rtaView.i===n?'a':''}">OUT${n+1}</button>`;
-    h+=`<div style="display:flex;flex-wrap:wrap;gap:4px;align-items:center;margin-bottom:6px">
-      <span style="color:var(--mu);font-size:11px">RTA</span>${rtaBtns}
-    </div>`;
+    h+=`<div class="rta-row"><span>RTA</span>${rtaBtns}</div>
+    <div style="color:var(--mu);font-size:10px;margin-bottom:6px">Cubit atau scroll = lebar / sempit band · drag = freq & gain</div>`;
     h+=`<canvas id="cv"></canvas><div class="eqb" id="EQB"></div><div id="BR"></div>`;
   }
   $('#P').innerHTML=h;
@@ -477,7 +477,7 @@ function bandRow(){
       <option value="highshelf"${e.t==='highshelf'?' selected':''}>High-Shelf</option></select></div>
     ${num('Freq',base+'.f',20,20000,1,'Hz')}
     ${num('Gain',base+'.g',-15,15,.1,'dB')}
-    ${num('Q',base+'.q',.3,10,.1,'')}
+    ${num('Width Q',base+'.q',.3,10,.1,'(↓lebih lebar)')}
     ${chk('On',base+'.on')}`;
 }
 
@@ -520,11 +520,10 @@ function drawEq(){
     vals[k]=rtaDisp[i0]*(1-t)+rtaDisp[i0+1]*t;
   }
   let a=vals.slice(), b=new Array(nPts);
-  for(let pass=0;pass<3;pass++){
+  for(let pass=0;pass<2;pass++){
     for(let k=0;k<nPts;k++){
-      const x0=a[Math.max(0,k-2)], x1=a[Math.max(0,k-1)], x2=a[k];
-      const x3=a[Math.min(nPts-1,k+1)], x4=a[Math.min(nPts-1,k+2)];
-      b[k]=(x0+4*x1+6*x2+4*x3+x4)/16;
+      const x0=a[Math.max(0,k-1)], x1=a[k], x2=a[Math.min(nPts-1,k+1)];
+      b[k]=(x0+2*x1+x2)/4;
     }
     const tmp=a; a=b; b=tmp;
   }
@@ -538,9 +537,9 @@ function drawEq(){
   }
   g.lineTo(PL+(nPts-1)*step, h-PB); g.lineTo(PL, h-PB); g.closePath();
   const grd=g.createLinearGradient(0,PT,0,h-PB);
-  grd.addColorStop(0,'rgba(250,204,21,.55)');
-  grd.addColorStop(0.55,'rgba(234,179,8,.22)');
-  grd.addColorStop(1,'rgba(234,179,8,.04)');
+  grd.addColorStop(0,'rgba(234,179,8,.42)');
+  grd.addColorStop(0.55,'rgba(234,179,8,.16)');
+  grd.addColorStop(1,'rgba(234,179,8,.03)');
   g.fillStyle=grd; g.fill();
   g.beginPath();
   g.moveTo(PL, RY(a[0]));
@@ -548,7 +547,7 @@ function drawEq(){
     const x0=PL+k*step, x1=PL+(k+1)*step;
     g.quadraticCurveTo(x0, RY(a[k]), (x0+x1)/2, (RY(a[k])+RY(a[k+1]))/2);
   }
-  g.strokeStyle='#facc15'; g.lineWidth=1.6; g.lineJoin='round'; g.stroke();
+  g.strokeStyle='#e4c15a'; g.lineWidth=1.4; g.lineJoin='round'; g.stroke();
   g.restore();
 
   // EQ response curve
@@ -565,27 +564,48 @@ function drawEq(){
   g.strokeStyle='#f4f4f4'; g.lineWidth=2; g.stroke();
   ch.eq.forEach((b,i)=>{
     const x=X(b.f), y=Y(b.on?b.g:0);
-    g.beginPath(); g.arc(x,y,i===band?10:8,0,6.3);
-    g.fillStyle=BC[i]; g.fill(); g.strokeStyle=i===band?'#fff':'#000'; g.stroke();
-    g.fillStyle='#000'; g.font='bold 10px sans-serif'; g.textAlign='center'; g.textBaseline='middle';
+    g.beginPath(); g.arc(x,y,i===band?10:7,0,6.3);
+    g.fillStyle=BC[i]; g.fill();
+    g.strokeStyle=i===band?'#fff':'#0a0c10'; g.lineWidth=i===band?2:1.2; g.stroke();
+    g.fillStyle='#0a0c10'; g.font='bold 9px system-ui,sans-serif'; g.textAlign='center'; g.textBaseline='middle';
     g.fillText(String(i+1),x,y);
   });
 }
+
 function bindCv(){
   const cv=$('#cv'); if(!cv)return;
+  let pinch0=0, q0=1;
+  const pinchDist=e=>{
+    if(!e.touches||e.touches.length<2) return 0;
+    const a=e.touches[0], b=e.touches[1];
+    return Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY);
+  };
   const hit=e=>{
     const r=cv.getBoundingClientRect();
-    const x=(e.clientX??e.touches[0].clientX)-r.left;
-    const y=(e.clientY??e.touches[0].clientY)-r.top;
+    const src=e.touches?e.touches[0]:e;
+    const x=src.clientX-r.left, y=src.clientY-r.top;
     const w=r.width,h=r.height, PL=30,PR=8,PT=10,PB=18,DR=15,LMIN=Math.log10(20),SPAN=3;
     const X=f=>PL+(Math.log10(cl(f,20,20000))-LMIN)/SPAN*(w-PL-PR);
     const Y=db=>PT+(h-PT-PB)*(0.5-db/(2*DR));
     const ch=sel.k==='i'?S.inputs[sel.i]:S.outputs[sel.i];
-    let best=null,bd=22;
+    let best=null,bd=24;
     ch.eq.forEach((b,i)=>{const d=Math.hypot(X(b.f)-x,Y(b.on?b.g:0)-y); if(d<bd){bd=d;best=i;}});
-    return {best,x,y,w,h,PL,PR,PT,PB,DR,LMIN,SPAN,X,Y};
+    return {best,x,y,w,h,PL,PR,PT,PB,DR,LMIN,SPAN};
+  };
+  // Q / bandwidth: pinch out = LEBAR (Q kecil), pinch in = SEMPIT (Q besar)
+  const applyQScale=(scale)=>{
+    if(!sel||sel.p!=='eq') return;
+    const ch=sel.k==='i'?S.inputs[sel.i]:S.outputs[sel.i];
+    const b=ch.eq[band];
+    // scale>1 (spread fingers) -> wider bandwidth -> lower Q
+    let q = q0 / scale;
+    q = cl(Math.round(q*100)/100, 0.3, 10);
+    b.q=q; b.on=true;
+    if(sel.k==='i') applyIn(sel.i); else applyOut(sel.i);
+    bandRow(); drawEq();
   };
   cv.onpointerdown=e=>{
+    if(e.pointerType==='touch' && e.isPrimary===false) return;
     const h=hit(e); if(h.best==null)return;
     drag=h.best; band=h.best; bandRow(); drawEq();
     try{cv.setPointerCapture(e.pointerId);}catch(_){}
@@ -604,7 +624,38 @@ function bindCv(){
     drawEq();
   };
   cv.onpointerup=()=>{drag=null;};
+  cv.ontouchstart=e=>{
+    if(e.touches&&e.touches.length===2){
+      pinch0=pinchDist(e);
+      const ch=sel.k==='i'?S.inputs[sel.i]:S.outputs[sel.i];
+      q0=ch.eq[band].q||1.2;
+      drag=null;
+      e.preventDefault();
+    }
+  };
+  cv.ontouchmove=e=>{
+    if(e.touches&&e.touches.length===2&&pinch0>20){
+      const d=pinchDist(e);
+      applyQScale(d/pinch0);
+      e.preventDefault();
+    }
+  };
+  cv.ontouchend=()=>{pinch0=0;};
+  // PC: ctrl+wheel or alt+wheel = bandwidth; plain wheel = Q fine
+  cv.onwheel=e=>{
+    if(!sel||sel.p!=='eq') return;
+    e.preventDefault();
+    const ch=sel.k==='i'?S.inputs[sel.i]:S.outputs[sel.i];
+    const b=ch.eq[band];
+    // scroll up = wider (Q down), scroll down = narrower (Q up)
+    const factor = e.deltaY<0 ? 0.9 : 1.1;
+    b.q=cl(Math.round(b.q*factor*100)/100, 0.3, 10);
+    b.on=true;
+    if(sel.k==='i') applyIn(sel.i); else applyOut(sel.i);
+    bandRow(); drawEq();
+  };
 }
+
 
 function setPath(path,val){
   const parts=path.split('.');
@@ -626,7 +677,7 @@ document.addEventListener('click',e=>{
   if(rt){
     rtaView={k:rt.dataset.rta,i:+rt.dataset.ch};
     document.querySelectorAll('[data-rta]').forEach(x=>x.classList.toggle('a', x===rt));
-    if(sel?.p==='eq') drawEq();
+    if(sel?.p==='eq'&&(fr%2)===0) drawEq();
     return;
   }
   const m=e.target.dataset.m;
@@ -763,7 +814,7 @@ function tick(){
       const g=el('CGR'); if(g) g.textContent=gr>0.05?('−'+gr.toFixed(1)+' dB'):'0.0 dB';
     }
   }
-  if(sel?.p==='eq') drawEq();
+  if(sel?.p==='eq'&&(fr%2)===0) drawEq();
   requestAnimationFrame(tick);
 }
 
