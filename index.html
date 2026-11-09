@@ -163,7 +163,7 @@ select{min-height:36px;padding:6px 8px;background:#0f1318}
 <body>
 <div class="app">
   <div class="top">
-    <div class="brand"><i>DLMS</i><div>dlms wansPRo<small>4 IN · 8 OUT · DSP</small></div></div>
+    <div class="brand"><i>DS</i><div>dlms wansPRo<small>4 IN 8 OUT DSP</small></div></div>
     <div class="r">
       <span class="chip" id="st">SIAP</span>
       <button class="a" id="bs">Save</button>
@@ -185,13 +185,13 @@ select{min-height:36px;padding:6px 8px;background:#0f1318}
     <button type="button" data-tab="route">ROUTE</button>
     <button type="button" data-tab="out">OUTPUT</button>
     <button type="button" data-tab="param">PARAM</button>
-    <button type="button" data-tab="vu">VU</button>
+    <button type="button" data-tab="vu">SIG</button>
   </nav>
 
   <div class="pad">
     <div class="card tab-pane on" data-pane="in">
       <h2><b>Input</b> IN 1–4</h2>
-      <div class="strips" id="In"></div>
+      <div class="strips" id="I"></div>
     </div>
     <div class="card tab-pane" data-pane="route">
       <h2><b>Routing</b> 4×8 matrix</h2>
@@ -199,14 +199,14 @@ select{min-height:36px;padding:6px 8px;background:#0f1318}
     </div>
     <div class="card tab-pane" data-pane="out">
       <h2><b>Output</b> OUT 1–8</h2>
-      <div class="strips" id="Out"></div>
+      <div class="strips" id="O"></div>
     </div>
     <div class="card tab-pane" data-pane="param" id="P">
       <h2><b>Parameter</b></h2>
       <div style="color:var(--mu)">Pilih GAIN / EQ / COMP / XOVER / LIM / DLY pada channel</div>
     </div>
     <div class="card tab-pane" data-pane="vu">
-      <h2><b>VU Meters</b></h2>
+      <h2><b>VU Meters</b> </h2>
       <div id="MI"></div>
       <div id="MO"></div>
     </div>
